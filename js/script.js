@@ -1,7 +1,7 @@
-// Copyright (c) 2022 Savyon All rights reserved
+// Copyright (c) 2023 Savyon All rights reserved
 //
 // Created by: Savyon
-// Created on: April 2023
+// Created on: March 2023
 // This file contains the JS functions for index.html
 
 "use strict"
@@ -11,7 +11,6 @@
  */
 function displayCost() {
   // initialize variables
-  let cost = "Please enter all the values above.";
   let errorMessage = "";
 
   // get age and day of the week
@@ -31,19 +30,20 @@ function displayCost() {
     document.getElementById("error-message").innerHTML = "";
   }
 
-  if (age < 5) {
-    cost = "You get in for FREE!";
-  } else if (age >= 5 && age <= 95) {
-    if (day === "Tuesday" || day === "Thursday") {
-      cost = "You get a student discount!";
-      if (age < 0) {
-        cost = "Please enter a valid age."
-    } else {
-      cost = "You have to pay regular price.";
-    }
-  }
+  if (age < 5 == 1) {
+		cost = "You get in for FREE!"
+	}
+	else if (age < 5 || age > 95) {
+		cost = "You get in for FREE!"
+	}
+	else if ((day == "Tuesday") || (day == "Thursday)") 
+			 || (age >=12) && (age <=21)) {
+		cost = "You get a student discount."
+	}
+	else if ((age < 0) || (day != "")) {		
+		cost = "You have to pay regular price."
+	}
 
   // display the result
   document.getElementById("display-results").innerHTML = cost;
-} 
-  }
+}
