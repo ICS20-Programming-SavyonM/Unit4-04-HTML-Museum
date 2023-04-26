@@ -11,6 +11,7 @@
  */
 function displayCost() {
   // initialize variables
+  let cost = ""
   let errorMessage = "";
 
   // get age and day of the week
@@ -38,7 +39,7 @@ function displayCost() {
 	}
 	else if ((day == "Tuesday") || (day == "Thursday)") 
 			 || (age >=12) && (age <=21)) {
-		cost = "You get a student discount."
+		cost = "You get a student discount!"
 	}
 	else if ((age < 0) || (day != "")) {		
 		cost = "You have to pay regular price."
