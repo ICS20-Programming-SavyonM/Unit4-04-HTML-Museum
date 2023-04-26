@@ -34,16 +34,18 @@ function displayCost() {
   if (age < 5 == 1) {
 		cost = "You get in for FREE!"
 	}
-	else if (age < 5 || age > 95) {
-		cost = "You get in for FREE!"
-	}
-	else if ((day == "Tuesday") || (day == "Thursday)") 
-			 || (age >=12) && (age <=21)) {
-		cost = "You get a student discount!"
-	}
-	else if ((age < 0) || (day != "")) {		
-		cost = "You have to pay regular price."
-	}
+ else if (age < 5 || age > 95) {
+    cost = "You get in for FREE!";
+}
+else if ((age >= 12 && age <= 21) || day == "Tuesday" || day == "Thursday") {
+    cost = "You get a student discount!";
+}
+else {
+    cost = "You have to pay regular price.";
+}
+
+
+
 
   // display the result
   document.getElementById("display-results").innerHTML = cost;
